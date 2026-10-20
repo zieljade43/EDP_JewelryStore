@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Us | Golden Luxe Jewelry</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<link rel="stylesheet" href="map.css">
+
+
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffdf9;
+            color: #25221e;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border-bottom: 1px solid #eee5d7;
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            color: #b89146;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #777;
+        }
+
+        .map-controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px;
+        }
+
+        .map-controls button {
+            padding: 12px 20px;
+            border: none;
+            background: #b89146;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .map-controls button:hover {
+            background: #8d6b2f;
+        }
+
+        #map {
+            width: 100%;
+            height: 65vh;
+            min-height: 400px;
+        }
+
+        .map-note {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        .store-popup {
+            text-align: center;
+            min-width: 180px;
+        }
+
+        .store-popup h3 {
+            color: #8d6b2f;
+            margin-bottom: 8px;
+        }
+
+        .store-popup img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 8px 0;
+        }
+
+        .store-popup p {
+            margin-bottom: 8px;
+        }
+
+        .store-popup a {
+            color: #8d6b2f;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #25221e;
+            color: white;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>Golden Luxe Jewelry</h1>
+        <p>Find Us • Explore Our Location</p>
+    </header>
+
+    <div class="map-controls">
+        <button onclick="flyToStore()">📍 Fly to Store</button>
+        <button onclick="flyToPhilippines()">📍 View Damilag</button>
+        
+    </div>
+
+    <div id="map"></div>
+
+    <p class="map-note">
+    Satellite imagery © Esri and its imagery providers.
+    Showing the Damilag area, Manolo Fortich, Bukidnon.
+</p>
+
+    <footer>
+        <p>&copy; 2026 Golden Luxe Jewelry. All rights reserved.</p>
+        <p><a href="index.html" style="color:#d8b56d;">Back to Home</a></p>
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        //  Damilag, Manolo Fortich, Bukidnon
+const storeLocation = [8.369, 124.864];
+        // satellite map
+        const map = L.map("map").setView(storeLocation, 16);
+
+        L.tileLayer(
+            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            {
+                maxZoom: 19,
+                attribution:
+                    "Tiles &copy; Esri and its imagery providers"
+            }
+        ).addTo(map);
+
+
+ // Store marker with popup GIF
+const storeMarker = L.marker(storeLocation).addTo(map);
+
+const popupContent = `
+    <div class="store-popup" style="text-align: center;">
+        <h3>💎 Golden Luxe Jewelry 💎</h3>
+
+        <img
+            src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif"
+            alt="Glamorous luxury lifestyle"
+            style="width: 180px; max-width: 100%; border-radius: 10px;"
+        >
+
+        <p>✨ Timeless elegance, made for you. ✨</p>
+        <p>Live like a queen. Shine like a diamond! 👑</p>
+
+        <a
+            href="https://www.google.com/maps/search/?api=1&query=${storeLocation[0]},${storeLocation[1]}"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            📍 Get Directions
+        </a>
+    </div>
+`;
+
+storeMarker.bindPopup(popupContent);
+
+
+        // FlyTo the store and open its popup
+        function flyToStore() {
+            map.flyTo(storeLocation, 18, {
+                animate: true,
+                duration: 2
+            });
+
+            setTimeout(function () {
+                storeMarker.openPopup();
+            }, 2000);
+        }
+
+        // FlyTo to the Philippines
+function flyToPhilippines() {
+    map.flyTo([8.369, 124.864], 14, {
+        animate: true,
+        duration: 2
+    });
+}
+
+        // FlyTo the marker and show its popup
+        function showStorePopup() {
+            flyToStore();
+        }
+
+        // Clicking the marker opens the popup automatically
+        storeMarker.on("click", function () {
+            console.log("Golden Luxe Jewelry marker clicked");
+        });
+    </script>
+
+</body>
+</html>

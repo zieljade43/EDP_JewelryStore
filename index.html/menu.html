@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Golden Luxe Jewelry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Golden Luxe<span>.</span></h2>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#collections">Collections</a></li>
+                <li><a href="map.html">Find Us</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <button class="cart-button" onclick="showCart()">
+                🛍️ Cart (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+    </header>
+
+
+    
+<!-- Jewelry Products -->
+<section class="collections" id="menu">
+    <h2>Explore Our Collection</h2>
+    <p class="section-description">
+        Choose your favorite jewelry and add it to your cart.
+    </p>
+
+    <!-- RINGS: 3 PRODUCTS -->
+    <h2 class="category-title">💍 Rings</h2>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Elegant Gold Ring">
+            <h3>Elegant Gold Ring</h3>
+            <p>A timeless ring for every occasion.</p>
+            <p class="price">₱1,500</p>
+            <button class="shop-link" onclick="addToCart('Elegant Gold Ring')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=600&q=80" alt="Diamond Glow Ring">
+            <h3>Diamond Glow Ring</h3>
+            <p>A sparkling touch of elegance.</p>
+            <p class="price">₱2,200</p>
+            <button class="shop-link" onclick="addToCart('Diamond Glow Ring')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=80" alt="Royal Statement Ring">
+            <h3>Royal Statement Ring</h3>
+            <p>A bold design for special moments.</p>
+            <p class="price">₱2,800</p>
+            <button class="shop-link" onclick="addToCart('Royal Statement Ring')">Add to Cart +</button>
+        </div>
+    </div>
+
+    <!-- NECKLACES: 3 PRODUCTS -->
+    <h2 class="category-title">📿 Necklaces</h2>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Golden Grace Necklace">
+            <h3>Golden Grace Necklace</h3>
+            <p>Elegant style for any occasion.</p>
+            <p class="price">₱2,000</p>
+            <button class="shop-link" onclick="addToCart('Golden Grace Necklace')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80" alt="Luxury Pendant Necklace">
+            <h3>Luxury Pendant</h3>
+            <p>A beautiful pendant with a classic look.</p>
+            <p class="price">₱1,750</p>
+            <button class="shop-link" onclick="addToCart('Luxury Pendant')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" alt="Layered Gold Necklace">
+            <h3>Layered Gold Necklace</h3>
+            <p>Modern layers with a luxurious finish.</p>
+            <p class="price">₱2,500</p>
+            <button class="shop-link" onclick="addToCart('Layered Gold Necklace')">Add to Cart +</button>
+        </div>
+    </div>
+
+    <!-- BRACELETS: 3 PRODUCTS -->
+    <h2 class="category-title">✨ Bracelets</h2>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" alt="Chic Gold Bracelet">
+            <h3>Chic Gold Bracelet</h3>
+            <p>A timeless accessory for your wrist.</p>
+            <p class="price">₱1,200</p>
+            <button class="shop-link" onclick="addToCart('Chic Gold Bracelet')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=80" alt="Golden Charm Bracelet">
+            <h3>Golden Charm Bracelet</h3>
+            <p>A charming detail for your style.</p>
+            <p class="price">₱1,450</p>
+            <button class="shop-link" onclick="addToCart('Golden Charm Bracelet')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80" alt="Luxury Gold Bangle">
+            <h3>Luxury Gold Bangle</h3>
+            <p>A sleek design with a polished finish.</p>
+            <p class="price">₱1,800</p>
+            <button class="shop-link" onclick="addToCart('Luxury Gold Bangle')">Add to Cart +</button>
+        </div>
+    </div>
+
+    <!-- EARRINGS: 3 PRODUCTS -->
+    <h2 class="category-title">💎 Earrings</h2>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Classic Gold Earrings">
+            <h3>Classic Gold Earrings</h3>
+            <p>Elegant earrings for everyday beauty.</p>
+            <p class="price">₱950</p>
+            <button class="shop-link" onclick="addToCart('Classic Gold Earrings')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=600&q=80" alt="Golden Hoop Earrings">
+            <h3>Golden Hoop Earrings</h3>
+            <p>A stylish classic for every wardrobe.</p>
+            <p class="price">₱1,100</p>
+            <button class="shop-link" onclick="addToCart('Golden Hoop Earrings')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=600&q=80" alt="Crystal Spark Earrings">
+            <h3>Crystal Spark Earrings</h3>
+            <p>A sparkling accent for special occasions.</p>
+            <p class="price">₱1,400</p>
+            <button class="shop-link" onclick="addToCart('Crystal Spark Earrings')">Add to Cart +</button>
+        </div>
+    </div>
+
+    <!-- WATCHES: 3 PRODUCTS -->
+    <h2 class="category-title">⌚ Watches</h2>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Classic Luxe Watch">
+            <h3>Classic Luxe Watch</h3>
+            <p>Timeless style for every day.</p>
+            <p class="price">₱2,800</p>
+            <button class="shop-link" onclick="addToCart('Classic Luxe Watch')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80" alt="Golden Hour Watch">
+            <h3>Golden Hour Watch</h3>
+            <p>A luxurious accent for your wrist.</p>
+            <p class="price">₱3,500</p>
+            <button class="shop-link" onclick="addToCart('Golden Hour Watch')">Add to Cart +</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=600&q=80" alt="Elegant Timepiece">
+            <h3>Elegant Timepiece</h3>
+            <p>Refined style with a polished look.</p>
+            <p class="price">₱3,200</p>
+            <button class="shop-link" onclick="addToCart('Elegant Timepiece')">Add to Cart +</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>Golden Luxe<span>.</span></h3>
+        <p>Timeless elegance, made for you.</p>
+        <p class="copyright">
+            &copy; 2026 Golden Luxe Jewelry. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

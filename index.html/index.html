@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Luxe Jewelry</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<script>
+function showContact() {
+    const contact = document.getElementById("contact");
+
+    contact.classList.toggle("show-contact");
+
+    if (contact.classList.contains("show-contact")) {
+        contact.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+}
+</script>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Golden Luxe<span>.</span></h2>
+
+            <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="map.html">Find Us</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li>
+        <a href="#contact" onclick="showContact(event)">
+            Contact Us
+        </a>
+    </li>
+</ul>
+            <button class="cart-button" onclick="showCart()">
+            🛍️ Cart (<span id="cart-count">0</span>)
+        </button>
+
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="subtitle">TIMELESS BEAUTY, ETERNAL STYLE</p>
+            <h1>Jewelry That Tells<br>Your Story</h1>
+            <p>
+                Discover beautiful jewelry crafted to celebrate
+                your special moments and everyday elegance.
+            </p>
+            <a href="#collections" class="btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Why Choose Us?</h2>
+        <p class="section-description">
+            Discover the beauty of jewelry made with care.
+        </p>
+
+        <div class="feature-container">
+            <div class="feature-card">
+                <div class="feature-icon">✧</div>
+                <h3>Premium Quality</h3>
+                <p>Carefully selected materials for lasting beauty.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">♡</div>
+                <h3>Elegant Designs</h3>
+                <p>Beautiful pieces that match every style and occasion.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">◇</div>
+                <h3>Perfect Gifts</h3>
+                <p>Meaningful jewelry for birthdays, anniversaries, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+        <h2>Our Collections</h2>
+        <p class="section-description">
+            Find the perfect piece to express your style.
+        </p>
+
+        <div class="product-container">
+            <div class="product-card">
+                <img
+                    src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+                    alt="Elegant gold ring">
+                <h3>Elegant Rings</h3>
+                <p>Simple beauty for every occasion.</p>
+                <button class="shop-link"
+        onclick="addToCart('Elegant Rings')">
+    Add to Cart +
+</button>
+            </div>
+
+            <div class="product-card">
+                <img
+                    src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80"
+                    alt="Elegant gold necklace">
+                <h3>Gold Necklaces</h3>
+                <p>Add a touch of elegance to your look.</p>
+                <button class="shop-link"
+        onclick="addToCart('Gold Necklaces')">
+    Add to Cart +
+</button>
+            </div>
+
+            <div class="product-card">
+                <img
+                    src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+                    alt="Beautiful jewelry earrings">
+                <h3>Classic Earrings</h3>
+                <p>Small details, unforgettable style.</p>
+                <button class="shop-link"
+        onclick="addToCart('Classic Earrings')">
+    Add to Cart +
+</button>
+            </div>
+
+            <div class="product-card">
+                <img
+                    src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80"
+                    alt="Stylish gold bracelet">
+                <h3>Chic Bracelets</h3>
+                <p>Complete your look with timeless charm.</p>
+                <button class="shop-link"
+        onclick="addToCart('Chic Bracelets')">
+    Add to Cart +
+</button>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+    <h1>Get in Touch</h1>
+
+    <p>
+        Have questions about our collection?
+        We would love to hear from you.
+    </p>
+
+    <p>
+        <strong>Email:</strong>
+        zerochan936@gmail.com
+    </p>
+
+    <p>
+        <strong>Phone:</strong>
+        +63 916 851 4005
+    </p>
+
+    <p>
+        <strong>Location:</strong>
+        Philippines
+    </p>
+
+    <a href="mailto:zerochan936@gmail.com"
+        class="contact-button">
+        Send Us an Email
+    </a>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.instagram.com/jadeisherebiatch/"
+            target="_blank" rel="noopener noreferrer">
+            📸 Instagram
+        </a>
+        <a href="https://www.facebook.com/share/1YQUHaCvMr/?mibextid=wwXIfr"
+            target="_blank" rel="noopener noreferrer">
+            👍 Facebook
+        </a>
+    </div>
+</section>
+
+
+    
+<!-- Customer Reviews Section -->
+<section class="reviews" id="reviews">
+    <p class="review-subtitle">CUSTOMER TESTIMONIALS</p>
+    <h2>What Our Customers Say</h2>
+    <p class="review-intro">
+        Read about the experiences of our jewelry customers.
+    </p>
+
+    <!-- Overall Rating -->
+    <div class="rating-summary">
+        <h3>4.8 / 5</h3>
+        <div class="stars">★★★★★</div>
+        <p>Based on 4 sample reviews</p>
+    </div>
+
+    <!-- Previous Buyer Reviews -->
+    <div class="review-container">
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="customer-avatar">M</div>
+                <div>
+                    <h3>Maria Santos</h3>
+                    <p class="buyer-label">Previous Buyer</p>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <h4>Beautiful Necklace!</h4>
+            <p class="review-comment">
+                The necklace is elegant and looks even more beautiful
+                in person. Perfect for special occasions!
+            </p>
+            <p class="review-date">October 5, 2026</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="customer-avatar">J</div>
+                <div>
+                    <h3>John Reyes</h3>
+                    <p class="buyer-label">Previous Buyer</p>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <h4>Great Gift</h4>
+            <p class="review-comment">
+                I bought a bracelet as a gift for my girlfriend.
+                The design was lovely and the price was reasonable.
+            </p>
+            <p class="review-date">September 28, 2026</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="customer-avatar">A</div>
+                <div>
+                    <h3>Angela Cruz</h3>
+                    <p class="buyer-label">Previous Buyer</p>
+                </div>
+            </div>
+            <div class="stars">★★★★☆</div>
+            <h4>Elegant and Stylish</h4>
+            <p class="review-comment">
+                I love my new earrings! They match my outfits perfectly.
+                I would love to see more designs in the future.
+            </p>
+            <p class="review-date">September 20, 2026</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <div class="customer-avatar">S</div>
+                <div>
+                    <h3>Sofia Garcia</h3>
+                    <p class="buyer-label">Previous Buyer</p>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <h4>Worth It!</h4>
+            <p class="review-comment">
+                The ring has a beautiful design. Ordering was easy,
+                and I am happy with my purchase.
+            </p>
+            <p class="review-date">September 12, 2026</p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Feedback Section -->
+<section class="feedback" id="feedback">
+    <h2>We Value Your Feedback</h2>
+    <p class="feedback-description">
+        Tell us about your experience with Golden Luxe Jewelry.
+    </p>
+
+    <form id="feedbackForm">
+        <div class="form-group">
+            <label for="customerName">Your Name</label>
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="customerEmail">Your Email</label>
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Enter your email"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="rating">Rate Your Experience</label>
+            <select id="rating" required>
+                <option value="">Choose a rating</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                <option value="3">⭐⭐⭐ Good</option>
+                <option value="2">⭐⭐ Fair</option>
+                <option value="1">⭐ Needs Improvement</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Your Feedback</label>
+            <textarea
+                id="comments"
+                rows="5"
+                placeholder="Share your thoughts with us..."
+                required></textarea>
+        </div>
+
+        <button type="submit" class="feedback-btn">
+            Submit Feedback
+        </button>
+
+        <p id="feedbackMessage" aria-live="polite"></p>
+    </form>
+</section>
+    <!-- Footer -->
+    <footer>
+        <h3>Golden Luxe<span>.</span></h3>
+        <p>Timeless elegance, made for you.</p>
+        <p class="copyright">
+            &copy; 2026 Golden Luxe Jewelry. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
